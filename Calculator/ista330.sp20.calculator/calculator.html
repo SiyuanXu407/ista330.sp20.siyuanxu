@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .box input {
+        font-size: 18px;
+        padding: 0 5px;
+    }
+
+    .answer {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+</style>
+<body>
+    <div class="box">
+        Please enter your numeric expression：<input type="text" id="expression">
+    </div>
+
+    <div class="answer">
+        <span id="l"></span>
+        <span id="r"></span>
+    </div>
+</body>
+
+<script src="../ista330.sp20.calculator.api/calculator.js"></script>
+<script>
+    var input = document.getElementById("expression")
+    input.oninput = function(){
+                if(input.value){
+                    document.getElementById("l").innerHTML = input.value+"=";
+                    try {
+
+                        if(input.value[0] == "-"){
+                            var val = "0"+input.value;
+                        }else{
+                            var val = input.value;
+                        }
+                        document.getElementById("r").innerHTML = calculate(val);
+                    } catch(e) {
+
+                        document.getElementById("r").innerHTML = "SyntaxError";
+                    }
+
+                }else{
+                    document.getElementById("l").innerHTML = ""
+                    document.getElementById("r").innerHTML = ""
+                }
+                // var aa = calculate(input.value);
+                // console.log(aa);
+			}
+
+</script>
+
+</html>
