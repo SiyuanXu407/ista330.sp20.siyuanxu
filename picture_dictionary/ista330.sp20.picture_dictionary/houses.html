@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.cen {
+			display: flex;
+		}
+		.img_box {
+			width: 800px;
+			position: relative;
+		}
+		.img_box img{
+			width: 800px;
+		}
+		.pot {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 999;
+		}
+		.one {
+			top: 173px;
+			left: 7px;
+		}
+		.two {
+			top: 142px;
+			left: 45px;
+		}
+		.three {
+			top: 23px;
+			left: 123px;
+		}
+		.four {
+			top: 77px;
+			left: 198px;
+		}
+		.five {
+			top: 132px;
+			left: 356px;
+		}
+		.six {
+			top: 161px;
+			left: 544px;
+		}
+		.seven {
+			top: 134px;
+			left: 592px;
+		}
+		.eight {
+			top: 117px;
+			left: 621px;
+		}
+		.nine {
+			top: 26px;
+			left: 676px;
+		}
+		.ten {
+			top: 279px;
+			left: 286px;
+		}
+		.eleven {
+			top: 383px;
+			left: 152px;
+		}
+		.twelve {
+			top: 487px;
+			left: 188px;
+		}
+		.thirteen {
+			top: 533px;
+			left: 97px;
+		}
+		.fourteen {
+			top: 582px;
+			left: 77px;
+		}
+		.fifteen {
+			top: 649px;
+			left: 75px;
+		}
+		.sxiteen {
+			top: 658px;
+			left: 206px;
+		}
+		.seventeen {
+			top: 593px;
+			left: 229px;
+		}
+		.eighteen {
+			top: 543px;
+			left: 242px;
+		}
+		.nineteen {
+			top: 452px;
+			left: 544px;
+		}
+		.twenty {
+			top: 473px;
+			left: 395px;
+		}
+		.twenty-one {
+			top: 495px;
+			left: 352px;
+		}
+		.twenty-two {
+			top: 544px;
+			left: 372px;
+		}
+		.twenty-three {
+			top: 674px;
+			left: 319px;
+		}
+		.twenty-four {
+			top: 527px;
+			left: 594px;
+		}
+		.twenty-five {
+			top: 322px;
+			left: 722px;
+		}
+		.twenty-six {
+			top: 429px;
+			left: 683px;
+		}
+		.twenty-seven {
+			top: 435px;
+			left: 720px;
+		}
+		.twenty-eight {
+			top: 490px;
+			left: 687px;
+		}
+		.twenty-nine {
+			top: 451px;
+			left: 776px;
+		}
+		.thirty {
+			top: 627px;
+			left: 634px;
+		}
+		.thirty-one {
+			top: 622px;
+			left: 682px;
+		}
+		.thirty-two {
+			top: 548px;
+			left: 724px;
+		}
+		ul li {
+			font-size: 22px;
+		}
+	</style>
+	<body>
+		<h1>Houses</h1>
+		<div class="cen">
+			<div class="img_box">
+				<img src="imgs/8d6bc7f6649c9517fec98a8b26c0357.jpg" >
+				<div class="pot one" onclick="Click(1,'?')"></div>
+				<div class="pot two" onclick="Click(2,'?')"></div>
+				<div class="pot three" onclick="Click(3,'?')"></div>
+				<div class="pot four" onclick="Click(4,'?')"></div>
+				<div class="pot five" onclick="Click(5,'?')"></div>
+				<div class="pot six" onclick="Click(6,'?')"></div>
+				<div class="pot seven" onclick="Click(7,'?')"></div>
+				<div class="pot eight" onclick="Click(8,'?')"></div>
+				<div class="pot nine" onclick="Click(9,'?')"></div>
+				<div class="pot ten" onclick="Click(10,'?')"></div>
+				<div class="pot eleven" onclick="Click(11,'?')"></div>
+				<div class="pot twelve" onclick="Click(12,'?')"></div>
+				<div class="pot thirteen" onclick="Click(13,'?')"></div>
+				<div class="pot fourteen" onclick="Click(14,'?')"></div>
+				<div class="pot fifteen" onclick="Click(15,'?')"></div>
+				<div class="pot sxiteen" onclick="Click(16,'?')"></div>
+				<div class="pot seventeen" onclick="Click(17,'?')"></div>
+				<div class="pot eighteen" onclick="Click(18,'?')"></div>
+				<div class="pot nineteen" onclick="Click(19,'?')"></div>
+				<div class="pot twenty" onclick="Click(20,'?')"></div>
+				<div class="pot twenty-one" onclick="Click(21,'?')"></div>
+				<div class="pot twenty-two" onclick="Click(22,'?')"></div>
+				<div class="pot twenty-three" onclick="Click(23,'?')"></div>
+				<div class="pot twenty-four" onclick="Click(24,'?')"></div>
+				<div class="pot twenty-five" onclick="Click(25,'?')"></div>
+				<div class="pot twenty-six" onclick="Click(26,'?')"></div>
+				<div class="pot twenty-seven" onclick="Click(27,'?')"></div>
+				<div class="pot twenty-eight" onclick="Click(28,'?')"></div>
+				<div class="pot twenty-nine" onclick="Click(29,'?')"></div>
+				<div class="pot thirty" onclick="Click(30,'?')"></div>
+				<div class="pot thirty-one" onclick="Click(31,'?')"></div>
+				<div class="pot thirty-two" onclick="Click(32,'?')"></div>
+			</div>
+			<ul>
+
+			</ul>
+		</div>
+	</body>
+	<script src="./js/server.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function Click(x,y){
+			var data_id = document.getElementsByClassName('one');
+			var ul = document.getElementsByTagName('ul')[0]
+			var text = document.createTextNode(x + " - " + y);
+			var ele = document.createElement("li");
+			ele.appendChild(text);
+			ul.appendChild(ele);
+		}
+	</script>
+</html>

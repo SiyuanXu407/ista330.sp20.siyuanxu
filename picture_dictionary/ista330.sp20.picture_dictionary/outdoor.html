@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.cen {
+			display: flex;
+		}
+		.img_box {
+			width: 800px;
+			position: relative;
+		}
+		.img_box img{
+			width: 800px;
+		}
+		.pot {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 999;
+		}
+		.one {
+			top: 266px;
+			left: 22px;
+		}
+		.two {
+			top: 197px;
+			left: 118px;
+		}
+		.three {
+			top: 298px;
+			left: 118px;
+		}
+		.four {
+			top: 262px;
+			left: 169px;
+		}
+		.five {
+			top: 345px;
+			left: 139px;
+		}
+		.six {
+			top: 468px;
+			left: 158px;
+		}
+		.seven {
+			top: 328px;
+			left: 241px;
+		}
+		.eight {
+			top: 421px;
+			left: 273px;
+		}
+		.nine {
+			top: 673px;
+			left: 378px;
+		}
+		.ten {
+			top: 316px;
+			left: 354px;
+		}
+		.eleven {
+			top: 309px;
+			left: 433px;
+		}
+		.twelve {
+			top: 389px;
+			left: 366px;
+		}
+		.thirteen {
+			top: 389px;
+			left: 398px;
+		}
+		.fourteen {
+			top: 500px;
+			left: 518px;
+		}
+		.fifteen {
+			top: 539px;
+			left: 549px;
+		}
+		.sxiteen {
+			top: 314px;
+			left: 571px;
+		}
+		.seventeen {
+			top: 378px;
+			left: 533px;
+		}
+		.eighteen {
+			top: 241px;
+			left: 633px;
+		}
+		.nineteen {
+			top: 295px;
+			left: 684px;
+		}
+		.twenty {
+			top: 350px;
+			left: 663px;
+		}
+		.twenty-one {
+			top: 498px;
+			left: 663px;
+		}
+		.twenty-two {
+			top: 243px;
+			left: 773px;
+		}
+		.twenty-three {
+			top: 309px;
+			left: 773px;
+		}
+		.twenty-four {
+			top: 368px;
+			left: 751px;
+		}
+		.twenty-five {
+			top: 515px;
+			left: 743px;
+		}
+		ul li {
+			font-size: 22px;
+		}
+	</style>
+	<body>
+		<h1>Outdoor Clothes</h1>
+		<div class="cen">
+			<div class="img_box">
+				<img src="imgs/2483aef04b3d4b47bd354c607f8b2ed.jpg" >
+				<div class="pot one" onclick="Click(1,'?')"></div>
+				<div class="pot two" onclick="Click(2,'?')"></div>
+				<div class="pot three" onclick="Click(3,'?')"></div>
+				<div class="pot four" onclick="Click(4,'?')"></div>
+				<div class="pot five" onclick="Click(5,'?')"></div>
+				<div class="pot six" onclick="Click(6,'?')"></div>
+				<div class="pot seven" onclick="Click(7,'?')"></div>
+				<div class="pot eight" onclick="Click(8,'?')"></div>
+				<div class="pot nine" onclick="Click(9,'?')"></div>
+				<div class="pot ten" onclick="Click(10,'?')"></div>
+				<div class="pot eleven" onclick="Click(11,'?')"></div>
+				<div class="pot twelve" onclick="Click(12,'?')"></div>
+				<div class="pot thirteen" onclick="Click(13,'?')"></div>
+				<div class="pot fourteen" onclick="Click(14,'?')"></div>
+				<div class="pot fifteen" onclick="Click(15,'?')"></div>
+				<div class="pot sxiteen" onclick="Click(16,'?')"></div>
+				<div class="pot seventeen" onclick="Click(17,'?')"></div>
+				<div class="pot eighteen" onclick="Click(18,'?')"></div>
+				<div class="pot nineteen" onclick="Click(19,'?')"></div>
+				<div class="pot twenty" onclick="Click(20,'?')"></div>
+				<div class="pot twenty-one" onclick="Click(21,'?')"></div>
+				<div class="pot twenty-two" onclick="Click(22,'?')"></div>
+				<div class="pot twenty-three" onclick="Click(23,'?')"></div>
+				<div class="pot twenty-four" onclick="Click(24,'?')"></div>
+				<div class="pot twenty-five" onclick="Click(25,'?')"></div>
+			</div>
+			<ul>
+
+			</ul>
+		</div>
+	</body>
+	<script src="./js/server.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function Click(x,y){
+			var data_id = document.getElementsByClassName('one');
+			var ul = document.getElementsByTagName('ul')[0]
+			var text = document.createTextNode(x + " - " + y);
+			var ele = document.createElement("li");
+			ele.appendChild(text);
+			ul.appendChild(ele);
+		}
+	</script>
+</html>
