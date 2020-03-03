@@ -23,43 +23,30 @@
 
 </style>
 <body>
-    <div class="box">
-        Please enter your numeric expression：<input type="text" id="expression">
-    </div>
+  <input type="text" id="expression" onkeyup="getResultFromTheServer()">
+  <div id="result"></div>
 
-    <div class="answer">
-        <span id="l"></span>
-        <span id="r"></span>
-    </div>
+
+  <script>
+  var url = "http://localhost:3001/";
+  function getResultFromTheServer() {
+  let expression = document.getElementById('expression').value;
+  let resultHolder = document.getElementById('result');
+  console.log(expression);
+  expression = encodeURIComponent(expression);
+  fetch(url + "?expression=" + expression)
+  .then(response => {
+  return response.text();
+  })
+  .then(text => {
+  resultHolder.innerHTML = text;
+  })
+  .catch(exception => {
+  console.error(exception);
+  });
+  }
+  </script>
+
 </body>
-
-<script src="../ista330.sp20.calculator.api/calculator.js"></script>
-<script>
-    var input = document.getElementById("expression")
-    input.oninput = function(){
-                if(input.value){
-                    document.getElementById("l").innerHTML = input.value+"=";
-                    try {
-
-                        if(input.value[0] == "-"){
-                            var val = "0"+input.value;
-                        }else{
-                            var val = input.value;
-                        }
-                        document.getElementById("r").innerHTML = calculate(val);
-                    } catch(e) {
-
-                        document.getElementById("r").innerHTML = "SyntaxError";
-                    }
-
-                }else{
-                    document.getElementById("l").innerHTML = ""
-                    document.getElementById("r").innerHTML = ""
-                }
-                // var aa = calculate(input.value);
-                // console.log(aa);
-			}
-
-</script>
 
 </html>

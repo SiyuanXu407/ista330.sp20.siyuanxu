@@ -11,7 +11,6 @@ let calculate = function(expression){
 
 
 
-
   expression = expression.replace(/\s/g,'');
 
   while(expression.indexOf('**')>-1){
@@ -80,7 +79,7 @@ let calculate = function(expression){
     result = result - Number(arr1[i]);
   }
 
-  return result;
+  return String(result);
 
 }
 
