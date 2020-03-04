@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+    Step1: Select or input a theme:<input list="themes">
+
+    <datalist id="themes">
+      <option value = "The Supermarket">
+      <option value = "Outdoor">
+      <option value = "Houses">
+    </datalist>
+  </div>
+  <div id = "step2" onclick="showHide1()">
+    Step2: Select an image:<input list="picId">or upload a new image:<input type="file" value="Choose File">No file choosen</button>
+</div>
+<div id = "step3" onclick="showHide2()">
+  Step3: Add labels and words to the image:<img src = "url" id = "image">
+</div>
+<style media="screen">
+  #step2, #step3
+  {
+    display:none;
+    position:absolute;
+  }
+</style>
+<script type="text/javascript">
+  function showHide1(){
+    var obj = document.getElementById("step2");
+    obj.style.display ="block";
+  }
+  function showHide2(){
+    var obj = document.getElementById("step3");
+    obj.style.display = "block";
+  }
+</script>
+  </body>
+</html>

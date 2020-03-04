@@ -15,8 +15,8 @@ let themes = [{id: 1, name: 'The Supermarket'},
 let images = [{id: 23, name: 'the-supermarket.png', themeId: 1},
               {id: 24, name: 'outdoor-clothes.png', themeId: 2},
               {id: 25, name: 'houses.png', themeId: 3}];
-let words = [{id:1, themeId: 1, imageId: 23, name:'scale', X: 210, Y:120, number: 10},
-             {id:1, themeId: 1, imageId: 23, name:'aisle', X: 340, Y:210, number:7}];
+let words = [{id:1, themeId: 1, imageId: 23, name:'scale', X: 145, Y:534, number: 7},
+             {id:1, themeId: 1, imageId: 23, name:'aisle', X: 340, Y:210, number:10}];
 // the methods
 app.get('/', (request, response) => {
    response.send('This is picture dictionary service.')
@@ -30,8 +30,8 @@ app.get('/words/:contentId/:imageId/:objectX/:objectY', (request, response) => {
   //TODO
    let word = words.find(x => x.themeId === themeId &&
                    x.imageId === imageId &&
-                   (Math.abs(x.X - objectX)<10) &&
-                   (Math.abs(x.Y - objectY)<10);
+                   (Math.abs(x.X - objectX) < 10) &&
+                   (Math.abs(x.Y - objectY) < 10));
    if (word) {
      response.json({name: word.name, number: word.number});
    } else {
