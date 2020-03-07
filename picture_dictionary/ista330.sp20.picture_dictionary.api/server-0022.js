@@ -11,10 +11,12 @@ app.use(cors())
 
 let themes = [{id: 1, name: 'The Supermarket'},
               {id: 2, name: 'Outdoor'},
-              {id: 3, name: 'Houses'}];
-let images = [{id: 23, name: 'the-supermarket.png', themeId: 1},
-              {id: 24, name: 'outdoor-clothes.png', themeId: 2},
-              {id: 25, name: 'houses.png', themeId: 3}];
+              {id: 3, name: 'Seasonal Verbs'},
+              {id: 4, name: 'Houses'}];
+let images = [{id: 23, name: '1.jpg', themeId: 1},
+              {id: 24, name: '2.jpg', themeId: 2},
+              {id: 25, name: '3.jpg', themeId: 3}
+              {id: 26, name: '4.jpg', themeId: 4}];
 let words = [{id:1, themeId: 1, imageId: 23, name:'scale', X: 145, Y:534, number: 7},
              {id:1, themeId: 1, imageId: 23, name:'aisle', X: 340, Y:210, number:10}];
 // the methods
@@ -44,7 +46,7 @@ app.get('/pages/:contentId/image/:imageId', (request, response) => {
    let imageId = Number(request.params.imageId);
    let image = images.find(x => x.id === imageId && x.themeId === themeId);
    if(image) {
-       response.sendFile(__dirname + '/data/' + image.name);
+       response.sendFile('./static/imgs/' + image.name);
    } else {
      response.status(404).send('No images were found.')
    }
